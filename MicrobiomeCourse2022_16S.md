@@ -8,7 +8,7 @@ If you are not familiar with R, it is an extremely useful tool for analyzing and
 
 - [Introduction to R Programming with Data Camp](https://www.youtube.com/watch?v=HkNFn6eosaU)
 - [Getting started with R and RStudio](https://www.youtube.com/watch?v=lVKMsaWju8w&t=3s)
-- If you are interested in learning more R, I recommend this [book](https://www.amazon.com/Data-Science-Transform-Visualize-Model/dp/1491910399/ref=sr_1_9?dchild=1&keywords=tidyverse&qid=1620329413&s=books&sr=1-9).
+- If you are interested in learning more R, I recommend this [book](https://r4ds.had.co.nz/).
 To ensure you have successfully installed the software, please open R studio and type the following code into your console:
 
 ```
