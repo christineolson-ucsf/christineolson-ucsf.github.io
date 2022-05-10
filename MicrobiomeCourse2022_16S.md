@@ -5,14 +5,15 @@ We will be making use of the R programming language which is commonly used acros
 
 If you are not familiar with R, it is an extremely useful tool for analyzing and visualizing data. I would recommend these videos:
 
-Introduction to R Programming with Data Camp
-Getting started with R and RStudio
-If you are interested in learning more R, I recommend this book.
+-Introduction to R Programming with Data Camp
+-Getting started with R and RStudio
+-If you are interested in learning more R, I recommend this book.
 To ensure you have successfully installed the software, please open R studio and type the following code into your console:
 
 ```
 R.Version()$version.string
 ```
+The console should print your version of R (4.2.0 if you downloaded as followed instructions above. 
 
 # Installing Required Packages
 Generally speaking, most packages for microbial ecology exist in 3 places: CRAN, Bioconductor, and Github. CRAN is the main R repository from which packages can be installed using install.packages(). Bioconductor is a repository specializing in bioinformatics. Bioconductor packages are installed via its own package (available from CRAN) called BiocManager which has a function called BiocManager::install(). Finally, the newest versions of packages or in-development packages are often found on github which can be installed using a package called devtools which offers devtools::install_github(). To install the required packages, copy and past the code below line by line into your R session. If asked to compile type yes and if asked to update packages type no.
