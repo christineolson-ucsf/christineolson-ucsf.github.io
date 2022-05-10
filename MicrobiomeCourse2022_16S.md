@@ -78,3 +78,11 @@ Now that we have the reads, we need to know which samples they belong to! This i
 ```
 download.file("https://github.com/https://github.com/christineolson-ucsf/christineolson-ucsf.github.io/micro-pd-sample-metadata.tsv", "metadata.tsv")
 ```
+
+# Taxonomy Database
+Finally, we will download a database for taxonomic assignment. We will be using the RDP database; however, we will discuss alternate (and perhaps better) choices during the tutorial.
+
+```
+download.file("https://zenodo.org/record/4310151/files/rdp_species_assignment_18.fa.gz", "rdp_species_assignment_18.fa.gz")
+download.file("https://zenodo.org/record/4310151/files/rdp_train_set_18.fa.gz", "rdp_train_set_18.fa.gz")
+```
