@@ -1,13 +1,13 @@
 # Microbiome Tutorial 2022 -- 16S Data Analysis
 
 # Installing R and R Studio
-We will be making use of the R programming language which is commonly used across many fields for statistical analysis. To begin, please install and/or update to version of R (4.0.5 by downloading from the following link. R is commonly accessed through an easy-to-use interface called R studio. This can be downloaded here. Microbiome-analysis software is frequently updated and is often not back-compatible so please ensure you have the latest version of R.
+We will be making use of the R programming language which is commonly used across many fields for statistical analysis. To begin, please install and/or update to version of R (4.2.0 by downloading from the following [link](https://ftp.osuosl.org/pub/cran/). R is commonly accessed through an easy-to-use interface called R studio. This can be downloaded here. Microbiome-analysis software is frequently updated and is often not back-compatible so please ensure you have the latest version of R. You can find how to update R and R Studio [here](https://bootstrappers.umassmed.edu/bootstrappers-courses/courses/rCourse/Additional_Resources/Updating_R.html#updating-on-mac-and-ubuntu). 
 
 If you are not familiar with R, it is an extremely useful tool for analyzing and visualizing data. I would recommend these videos:
 
--Introduction to R Programming with Data Camp
--Getting started with R and RStudio
--If you are interested in learning more R, I recommend this book.
+- Introduction to R Programming with Data Camp
+- Getting started with R and RStudio
+- If you are interested in learning more R, I recommend this book.
 To ensure you have successfully installed the software, please open R studio and type the following code into your console:
 
 ```
