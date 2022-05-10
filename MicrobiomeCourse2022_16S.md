@@ -74,4 +74,7 @@ list.files("reads")
 # Metadata
 Now that we have the reads, we need to know which samples they belong to! This is called metadata, and a spreadsheet (in tab separated format) is available to download as below. Note that you could just as easily use excel spread sheets; however, there are some special considerations for reading/writing excel files and they love to auto-convert text to dates which can cause issues.
 
-download.file("https://github.com/https://github.com/christineolson-ucsf/christineolson-ucsf.github.io/micro-pd-sample-metadata.tsv","metadata.tsv")
+
+```
+download.file("https://github.com/https://github.com/christineolson-ucsf/christineolson-ucsf.github.io/micro-pd-sample-metadata.tsv", "metadata.tsv")
+```
