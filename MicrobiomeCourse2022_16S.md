@@ -63,14 +63,12 @@ Please download the "reads.zip" file from this [Google Drive folder](https://dri
 Now that we have downloaded the reads, we can unpack the folder as below:
 
 ```
-unzip("reads.zip")
+unzip("~/Desktop/16S_tutorial/reads.zip")
 ```
 
-You will now see that a folder called reads has appeared. We can look at them in R using list.files().
+You will now see that all sequencing files are in the 16S_tutorial folder.
 
-```
-list.files("reads")
-```
+
 # Metadata
 Now that we have the reads, we need to know which samples they belong to! This is called metadata, and a spreadsheet (in tab separated format) is available to download as below. Note that you could just as easily use excel spread sheets; however, there are some special considerations for reading/writing excel files and they love to auto-convert text to dates which can cause issues.
 
