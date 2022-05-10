@@ -54,5 +54,5 @@ Then we can specifically set our working directory to be inside this folder:
 setwd("~/Desktop/16S_tutorial")
 ```
 
-Downloading Data
+# Downloading Data
 Please download the "reads.tar.gz" file from this [Google Drive folder](https://drive.google.com/drive/u/1/folders/1yINuUX0RExD1wWC-KERXmcH_uiB5-7XB) and move this file to the "16S_tutorial" folder on your Desktop.
