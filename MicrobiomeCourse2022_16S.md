@@ -33,7 +33,7 @@ install.packages("devtools") #A multi-purpose tool for developing packages
 devtools::install_github("jbisanz/qiime2R") #A multi-purpose microbiome import/processing package written by Jordan Bisanz
 ```
 
-After you have installed all of the above packages, it is a good idea to try loading them one by one as below. If a package fails to load, read the error message and then try to reinstall. Please contact me if there are issues which you can't resolve.
+After you have installed all of the above packages, it is a good idea to try loading them one by one as below. If a package fails to load, read the error message and then try to reinstall. Please contact me (christine.olson@ucsf.edu) if there are issues which you can't resolve.
 ```
 library(tidyverse)
 library(dada2)
