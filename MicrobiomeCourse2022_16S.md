@@ -81,6 +81,6 @@ download.file("https://raw.githubusercontent.com/christineolson-ucsf/MicrobiomeT
 Finally, we will download a database for taxonomic assignment. We will be using the RDP database; however, we will discuss alternate (and perhaps better) choices during the tutorial.
 
 ```
-download.file("https://zenodo.org/record/4310151/files/rdp_species_assignment_18.fa.gz", "rdp_species_assignment_18.fa.gz")
-download.file("https://zenodo.org/record/4310151/files/rdp_train_set_18.fa.gz", "rdp_train_set_18.fa.gz")
+download.file("https://zenodo.org/record/4310151/files/rdp_species_assignment_18.fa.gz", "~/Desktop/16S_tutorial/rdp_species_assignment_18.fa.gz")
+download.file("https://zenodo.org/record/4310151/files/rdp_train_set_18.fa.gz", "~/Desktop/16S_tutorial/rdp_train_set_18.fa.gz")
 ```
