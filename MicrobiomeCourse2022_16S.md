@@ -47,3 +47,11 @@ library(lme4)
 ```
 dir.create("~/Desktop/16S_tutorial") #Note: windows users would use setwd("C:\Users\YourUserName\Desktop\16S_tutorial")
 ```
+
+
+Then we can specifically set our working directory to be inside this folder:
+
+```
+setwd("~/Desktop/16S_tutorial")
+```
+
