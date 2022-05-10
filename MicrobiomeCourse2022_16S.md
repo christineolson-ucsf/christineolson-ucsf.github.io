@@ -4,9 +4,9 @@
 # Installing R and R Studio
 We will be making use of the R programming language which is commonly used across many fields for statistical analysis. To begin, please install and/or update to version of R (4.2.0 by downloading from the following [link](https://ftp.osuosl.org/pub/cran/). R is commonly accessed through an easy-to-use interface called R Studio. This can be downloaded [here](https://www.rstudio.com/products/rstudio/download/). Microbiome-analysis software is frequently updated and is often not back-compatible so please ensure you have the latest version of R. You can find how to update R and R Studio [here](https://bootstrappers.umassmed.edu/bootstrappers-courses/courses/rCourse/Additional_Resources/Updating_R.html#updating-on-mac-and-ubuntu). 
 
-If you are not familiar with R, it is an extremely useful tool for analyzing and visualizing data. I would recommend these videos:
+If you are not familiar with R, it is an extremely useful tool for analyzing and visualizing data. I would recommend these resources:
 
-- [Introduction to R Programming with Data Camp](https://www.youtube.com/watch?v=HkNFn6eosaU)
+- [Data Carpentry: Data Analysis for Ecologists](https://datacarpentry.org/R-ecology-lesson/)
 - [Getting started with R and RStudio](https://www.youtube.com/watch?v=lVKMsaWju8w&t=3s)
 - If you are interested in learning more R, I recommend this [book](https://r4ds.had.co.nz/).
 To ensure you have successfully installed the software, please open R studio and type the following code into your console:
