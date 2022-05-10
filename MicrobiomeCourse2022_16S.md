@@ -2,7 +2,7 @@
 
 # Installing Required Packages
 
-```
+```{r setup, include=FALSE}
 install.packages("tidyverse") #A group of related packages to facilitate a wide variety of useful tasks including plotting
 install.packages("vegan") #A commonly used ecology package offering diversity calculations and statistical tests
 install.packages("ape") #A package for phylogenetic analysis offering several useful functions for microbial ecology
