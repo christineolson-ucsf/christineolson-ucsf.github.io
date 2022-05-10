@@ -1,6 +1,7 @@
 # Microbiome Tutorial 2022 -- 16S Data Analysis
 
 # Installing Required Packages
+Generally speaking, most packages for microbial ecology exist in 3 places: CRAN, Bioconductor, and Github. CRAN is the main R repository from which packages can be installed using install.packages(). Bioconductor is a repository specializing in bioinformatics. Bioconductor packages are installed via its own package (available from CRAN) called BiocManager which has a function called BiocManager::install(). Finally, the newest versions of packages or in-development packages are often found on github which can be installed using a package called devtools which offers devtools::install_github(). To install the required packages, copy and past the code below line by line into your R session. If asked to compile type yes and if asked to update packages type no.
 
 ```{r setup, include=FALSE}
 install.packages("tidyverse") #A group of related packages to facilitate a wide variety of useful tasks including plotting
