@@ -10,7 +10,8 @@ Getting started with R and RStudio
 If you are interested in learning more R, I recommend this book.
 To ensure you have successfully installed the software, please open R studio and type the following code into your console:
 
-```R.Version()$version.string
+```
+R.Version()$version.string
 ```
 
 # Installing Required Packages
