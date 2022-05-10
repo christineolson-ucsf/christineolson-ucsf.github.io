@@ -1,5 +1,6 @@
 # Microbiome Tutorial 2022 -- 16S Data Analysis
 
+# Prior to Class:
 # Installing R and R Studio
 We will be making use of the R programming language which is commonly used across many fields for statistical analysis. To begin, please install and/or update to version of R (4.2.0 by downloading from the following [link](https://ftp.osuosl.org/pub/cran/). R is commonly accessed through an easy-to-use interface called R Studio. This can be downloaded [here](https://www.rstudio.com/products/rstudio/download/). Microbiome-analysis software is frequently updated and is often not back-compatible so please ensure you have the latest version of R. You can find how to update R and R Studio [here](https://bootstrappers.umassmed.edu/bootstrappers-courses/courses/rCourse/Additional_Resources/Updating_R.html#updating-on-mac-and-ubuntu). 
 
@@ -57,4 +58,20 @@ setwd("~/Desktop/16S_tutorial")
 ```
 
 # Downloading Data
-Please download the "reads.tar.gz" file from this [Google Drive folder](https://drive.google.com/drive/u/1/folders/1yINuUX0RExD1wWC-KERXmcH_uiB5-7XB) and move this file to the "16S_tutorial" folder on your Desktop.
+Please download the "reads.zip" file from this [Google Drive folder](https://drive.google.com/drive/u/1/folders/1yINuUX0RExD1wWC-KERXmcH_uiB5-7XB) and move this file to the "16S_tutorial" folder on your Desktop.
+
+Now that we have downloaded the reads, we can unpack the folder as below:
+
+```
+unzip("reads.zip")
+```
+
+You will now see that a folder called reads has appeared. We can look at them in R using list.files().
+
+```
+list.files("reads")
+```
+# Metadata
+Now that we have the reads, we need to know which samples they belong to! This is called metadata, and a spreadsheet (in tab separated format) is available to download as below. Note that you could just as easily use excel spread sheets; however, there are some special considerations for reading/writing excel files and they love to auto-convert text to dates which can cause issues.
+
+download.file("https://github.com/https://github.com/christineolson-ucsf/christineolson-ucsf.github.io/micro-pd-sample-metadata.tsv","metadata.tsv")
