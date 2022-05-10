@@ -74,7 +74,7 @@ Now that we have the reads, we need to know which samples they belong to! This i
 
 
 ```
-download.file("https://raw.githubusercontent.com/christineolson-ucsf/MicrobiomeTutorialData/main/micro-pd-sample-metadata.tsv", "~/Desktop/16S_tutorial/metadata.tsv")
+download.file("https://raw.githubusercontent.com/christineolson-ucsf/MicrobiomeTutorialData/main/metadata.tsv", "~/Desktop/16S_tutorial/metadata.tsv")
 ```
 
 # Taxonomy Database
