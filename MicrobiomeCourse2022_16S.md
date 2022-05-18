@@ -274,11 +274,10 @@ Now that we have our table made, we can start making our plot.
 ```
 diversity_table %>%
   pivot_longer(c(Shannon, Obs_ASVs), names_to="Metric", values_to="Diversity") %>%
-  ggplot(aes(x=sample_timepoint, y=Diversity, fill=age_5y_bins)) +
+  ggplot(aes(x=sample_timepoint, y=Diversity, fill=age)) +
   stat_summary(geom="ribbon", alpha=0.5) +
   geom_jitter(width=1, height=0, shape=21) +
   facet_wrap(~Metric, scales="free") +
-  theme_q2r() +
   xlab("Sample Timepoint") +
   ylab("Alpha Diversity") 
 ```
