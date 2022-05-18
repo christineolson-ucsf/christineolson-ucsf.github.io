@@ -199,6 +199,8 @@ forward_error<-learnErrors(metadata$read1_filtered, multithread = TRUE)
 reverse_error<-learnErrors(metadata$read2_filtered, multithread = TRUE)
 ```
 
+Next we can actually correct the data:
+
 ```
 forward_denoised<- dada(metadata$read1_filtered, err=forward_error, multithread=TRUE)
 ```
@@ -206,6 +208,8 @@ forward_denoised<- dada(metadata$read1_filtered, err=forward_error, multithread=
 ```
 reverse_denoised<- dada(metadata$read2_filtered, err=reverse_error, multithread=TRUE)
 ```
+
+Up until this point, we have been treating our forward and reverse reads separately. We can now merge them together to represent the complete V4 sequence using merge pairs.
 
 ```
 merged_reads <- mergePairs(
@@ -217,30 +221,42 @@ merged_reads <- mergePairs(
                           )
 ```
 
-
+Now we can get can get the output we really want: a table with each sample and the number of times each sequence is observed.
 ```
 merged_table <- makeSequenceTable(merged_reads)
 ```
 
+When dealing with amplicon data, it is incredibly important to remove chimeric reads. These sequences are generated through a number of mechanisms but result in a read that is derived from multiple original pieces of template DNA. Certain protocols for generating 16S rRNA amplicons, including the methods used to generate this data, are highly prone to chimera formation. For more information on how to prevent their formation, see the manuscript by [Gohl et al. 2016.](https://www.nature.com/articles/nbt.3601)
+
 ```
 asv_table<-removeBimeraDenovo(merged_table, method="pooled", multithread=TRUE, verbose=TRUE)
 ```
+Question: How many ASVs did we remove? Do they represent a lot of our data?
+
+
+Frustratingly, some people like to have samples as rows and features (ASVs) as columns, others like the reverse. Different tools have different expectations and you must always be aware which orientation is expected. I, unlike the authors of Dada2, prefer samples as columns. The good news is that we can easily transpose the table back and forth using the t() function.
 
 ```
 asv_table<-t(asv_table)
 ```
 
+If you look at the sample names in your table, it is the currently the name of the fastq file rather than the sample ID, we can switch them out as below.
 ```
 asv_table<-asv_table[,basename(metadata$read1_filtered)] #put columns in the same order as the metadata
 names(metadata)[names(metadata) == "sample-id"] <- "sample_id" #change sample name column due to issue with dashes in r variable names
 colnames(asv_table)<-metadata$sample_id #overwrite the column names
 ```
-
+You can also see in our table that the ASVs are being stored as their literal sequence. We can swap this out with something a little bit more readable as below while storing a copy of the sequences:
 ```
 sequences<-tibble(ASV=paste0("ASV_",1:nrow(asv_table)), Sequence=rownames(asv_table))
 rownames(asv_table)<-sequences$ASV
 ```
 
+One of the most obvious to describe a community is in terms of its diversity. While we probably all intuitively understand the concept, how might we actually define it quantitatively?
+
+Question: how even is our sequencing depth across samples?
+
+In this next code chunk our goal is to calculate our diversity metrics and then put them in a table with our metadata.
 
 ```
 diversity_table<-
@@ -253,7 +269,7 @@ diversity_table<-
   select(sample_id, every_sample, age, years_since_ldopastartage_T0, sample_timepoint, Shannon, Obs_ASVs, patient_number, gender, age_5y_bins, T0_patientID)
 ```
 
-
+Now that we have our table made, we can start making our plot.
 
 ```
 diversity_table %>%
@@ -266,13 +282,13 @@ diversity_table %>%
   xlab("Sample Timepoint") +
   ylab("Alpha Diversity") 
 ```
-
+Question: Do you see any trends in the data?
 
 
 ```
 ggsave("figures/diversity.pdf", height=3, width=5)
 ```
-
+Now we can do a statistical test accounting for the nature of the data:
 ```
 fit<-glmer.nb(Obs_ASVs~age_5y_bins*years_since_ldopastartage_T0+(1|sample_id), data=diversity_table)
 summary(fit)
